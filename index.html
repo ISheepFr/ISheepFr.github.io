@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Portfolio</title>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <h1>Welcome to my portfolio, currently building...</h1>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button id="voronoi" class="btn btn-primary" type="button">Project v</button>
+        <button id="rlbot" class="btn btn-primary" type="button">Project r</button>
+    </div>
+
+
+
+    <script>
+        document.getElementById('voronoi').addEventListener('click', function() {
+            window.location.href = 'projets/voronoi/voronoi.html';  
+        });
+
+        document.getElementById('rlbot').addEventListener('click', function() {
+            window.location.href = 'projets/rlbot/rlbot.html';  
+        });
+
+    </script>
+
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
