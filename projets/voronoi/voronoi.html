@@ -25,9 +25,10 @@
         </div>
     </div>
 
+    <br>
     <div class="container">
 
-    <hr class="featurette-divider">
+    <!-- <hr class="featurette-divider"> -->
 
     <div class="row featurette">
         <div class="col-md-7">
@@ -35,9 +36,9 @@
           <p class="lead">The goal of this project was to implement a first bruteforce algorithm of voronoi's diagrams and be able to apply this algorithm on input image.</p>
           <p class="lead">How it works :</p>
           <ul> 
-            <li>Random generation of big amount of points (voronoi seeds) </li>
-            <li>Computation of Voronoi's diagram with selected seeds</li>
-            <li>Associate the average of the values ​​with the pixels of each region</li>
+            <li class="lead">Random generation of big amount of points (voronoi seeds) </li>
+            <li class="lead">Computation of Voronoi's diagram with selected seeds</li>
+            <li class="lead">Associate the average of the values ​​with the pixels of each region</li>
         </ul>
         </div>
         <div class="col-md-5">
@@ -48,11 +49,21 @@
 
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-          <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          <h2 class="featurette-heading fw-normal lh-1">How to use it?</h2>
+          <p><span class="text-body-secondary lead">Positional parameters</span></p>
+          <br>
+          
+          <ul class="list-group list-group-flush"> 
+            <li class="lead list-group-item">nbseeds : The number of seeds to create</li>
+            <li class="lead list-group-item">--dist NUMBER (between 0,2) : The method for distance computation <br> default is 0 = euclidian dist <br> 1 = Manhattan dist <br> 2 = Chebyshev dist</li>
+            <li class="lead list-group-item">--img IMG_PATH : Path of the image to aproximate with Voroni's diagram</li>
+        </ul>
+          <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          -->
         </div>
         <div class="col-md-5 order-md-1">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          <br>
+          <img class="featurette-image img-fluid mx-auto" src="img/woloo.jpg" width="300" height="300" alt="wooloo">        </div>
         </div>
     </div>
       
