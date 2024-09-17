@@ -51,23 +51,46 @@
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading fw-normal lh-1">How to use it?</h2>
           <p><span class="text-body-secondary lead">Positional parameters</span></p>
-          <br>
+          
           
           <ul class="list-group list-group-flush"> 
-            <li class="lead list-group-item">nbseeds : The number of seeds to create</li>
-            <li class="lead list-group-item">--dist NUMBER (between 0,2) : The method for distance computation <br> default is 0 = euclidian dist <br> 1 = Manhattan dist <br> 2 = Chebyshev dist</li>
-            <li class="lead list-group-item">--img IMG_PATH : Path of the image to aproximate with Voroni's diagram</li>
+            <li class="lead list-group-item">nbseeds : The number of seeds to create <span class="badge bg-secondary ms-3 bg-danger">Required</span></li>
+            <li class="lead list-group-item">--dist NUMBER (between 0,2) : The method for distance computation <span class="badge bg-primary ms-3">Optional</span><br> 0 = euclidian dist (default)<br> 1 = Manhattan dist <br> 2 = Chebyshev dist</li>
+            <li class="lead list-group-item">--img IMG_PATH : Path of the image to aproximate with Voroni's diagram <span class="badge bg-primary ms-3">Optional</span></li>
         </ul>
           <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
           -->
         </div>
         <div class="col-md-5 order-md-1">
           <br>
-          <img class="featurette-image img-fluid mx-auto" src="img/woloo.jpg" width="300" height="300" alt="wooloo">        </div>
+          <!-- <img class="rounded featurette-image img-fluid mx-auto" src="img/woloo.jpg" width="500" height="500" alt="wooloo">        </div> -->
+          
+          <figure class="text-center">
+            <img class="featurette-image img-fluid mx-auto rounded" src="img/_cropped.png" width="500" height="500" alt="wooloo">
+            <figcaption class="fst-italic mt-3 lead">
+                Input image :  <a href="https://teivadict.artstation.com/projects/oOB06q" target="_blank"> <cite title="Source Title"> Wooloo by Teiva Roche</cite></a>
+                <br><cite title="Source Title"> nbseeds : 1500</cite>
+            </figcaption>
+        </figure>
+
         </div>
     </div>
       
     <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Output</h2>
+        <p class="lead">If an image path parameters is filled, the output will be Voronoi's diagram on the image. If no image path is filled, the computation is done on a black background, giving us a similar output image as the Description section. </p>
+      </div>
+      <div class="col-md-5">
+        <figure class="text-center">
+          <img class="featurette-image img-fluid mx-auto rounded" src="img/_voronoied.png" width="500" height="500" alt="wooloo">
+          <figcaption class="fst-italic mt-3 lead">
+              Output image : <cite title="Source Title">Voronoied Wooloo</cite></a>
+          </figcaption>
+      </figure>
+      </div>
 
     </div>
 
