@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../../src/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../src/css/stylesheet.css">
 
-  <script src="../../src/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
@@ -52,13 +51,68 @@
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading fw-normal lh-1">Parts used</h2>          
           
+          <div class="row">
+            <div class="col-4">
+              <div class="list-group " id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-esp-list" data-bs-toggle="list" href="#list-esp" role="tab" aria-controls="list-esp">1 x ESP32 NodeMCU</a>
+                <a class="list-group-item list-group-item-action" id="list-oled-list" data-bs-toggle="list" href="#list-oled" role="tab" aria-controls="list-oled">1 x I2C OLED screen</a>
+                <a class="list-group-item list-group-item-action" id="list-sw-list" data-bs-toggle="list" href="#list-sw" role="tab" aria-controls="list-sw">12 x keyboard switches</a>
+                <a class="list-group-item list-group-item-action" id="list-button-list" data-bs-toggle="list" href="#list-button" role="tab" aria-controls="list-button">1 x push button</a>
+                <a class="list-group-item list-group-item-action" id="list-led-list" data-bs-toggle="list" href="#list-led" role="tab" aria-controls="list-led">1 x ARGB LED strip WS2811</a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="tab-content" id="nav-tabContent">
+                <div class="lead tab-pane fade show active" id="list-esp" role="tabpanel" aria-labelledby="list-esp-list">
+                  
+                  The brain of the project, with the following roles :<br><br>
+                  <li>Managing the bluetooth connection</li>
+                  <li>Detection of the press/release of a key</li>
+                  <li>Detection of the profile change's button</li>
+                  <li>Managing the display on the screen</li>
+                  <li>Managing the light effect of the strip led</li>
+                  
+                  <br>
+                </div>
+
+                <div class="lead tab-pane fade" id="list-oled" role="tabpanel" aria-labelledby="list-oled-list">
+                  The OLED screen display if the keyboard is currently connected by bluetooth. If he is connected, the current profile name is shown with all the current bindings associated to this profile.
+                
+                  <br>
+                </div>
+
+                <div class="lead tab-pane fade" id="list-sw" role="tabpanel" aria-labelledby="list-sw-list">
+                  Like a mechanical keyboard, the switches are used to input. Depending on the active profile, the key bindings might change.
+                
+                  <br>
+                </div>
+
+                <div class="lead tab-pane fade" id="list-button" role="tabpanel" aria-labelledby="list-button-list">
+                  This button is used to switch between all the different profile (currently 3 : Lol, Valorant, CS:GO).
+                
+                  <br>
+                </div>
+                <div class="lead tab-pane fade" id="list-led" role="tabpanel" aria-labelledby="list-led-list">
+                  This led strip is only for the decoration. It is easily programmable for custom effect. The strip is currently making effect when the switches are pressed.
+                
+                <br>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+<!-- 
+
           <ul class="list-group list-group-flush"> 
-            <li class="lead list-group-item">1 x ESP32 NodeMCU : The microcontroller with a lot of input/output pin</li>
+            <li class="lead list-group-item">1 x ESP32 NodeMCU</li>
             <li class="lead list-group-item">1 x I2C OLED screen</li>
             <li class="lead list-group-item">12 x keyboard switches</li>
             <li class="lead list-group-item">1 x push button</li>
             <li class="lead list-group-item">1 x ARGB Strip led (WS2811)</li>
         </ul>
+        
+-->
           <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
           -->
         </div>
@@ -66,12 +120,13 @@
           <br>
           
           <figure class="text-center">
-            <img class="featurette-image img-fluid mx-auto rounded" src="img/cropped.png" width="500" height="500" alt="wooloo">
+            <img class="featurette-image img-fluid mx-auto rounded" src="img/wiring.png" alt="wiring">
             <figcaption class="fst-italic mt-3 lead">
-                Input image :  <a href="https://teivadict.artstation.com/projects/oOB06q" target="_blank"> <cite title="Source Title"> Wooloo by Teiva Roche</cite></a>
-                <br><cite title="Source Title"> nbseeds : 1500</cite>
+               <a href="" target="_blank"> <cite title="Source Title">Wiring</cite></a>
             </figcaption>
         </figure>
+
+        
 
         </div>
     </div>
@@ -80,8 +135,10 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Output</h2>
-        <p class="lead">If an image path parameters is filled, the output will be Voronoi's diagram on the image. If no image path is filled, the computation is done on a black background, giving us a similar output image as the Description section. </p>
+        <h2 class="featurette-heading fw-normal lh-1">Explaination</h2>
+        <p class="lead">The ESP32 NodeMCU is the brain of project  with differents main goal : </p>
+        
+
       </div>
       <div class="col-md-5">
         <figure class="text-center">
@@ -94,6 +151,7 @@
 
     </div>
 
+    <script src="../../src/js/bootstrap.bundle.min.js"></script>
     <script src="../../src/js/home_page.js"></script>
 </body>
 </html>
