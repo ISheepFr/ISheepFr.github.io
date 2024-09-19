@@ -51,7 +51,7 @@ let keyboard;
 let mixer;
 
 loader.load(
-    '/final.gltf',
+    '/public/final.gltf',
     function(gltf) {
         keyboard = gltf.scene;
         mixer = new THREE.AnimationMixer(keyboard);
