@@ -29,8 +29,8 @@ camera.position.z = 16.073784580717042;
 scene.background = new THREE.Color('#212529');
 
 
-const light = new THREE.DirectionalLight(0xffffff,12);
-const rgb_light = new THREE.DirectionalLight(0xffffff,4);
+const light = new THREE.DirectionalLight(0xffffff,7);
+const rgb_light = new THREE.DirectionalLight(0xffffff,3);
 let hue = 0;
 
 
