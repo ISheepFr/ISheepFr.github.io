@@ -5,7 +5,7 @@
   <title>Bluetooth keyboard</title>
 
   <link rel="stylesheet" href="../../src/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../src/css/stylesheet.css">
+  <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 <body>
@@ -29,9 +29,13 @@
         </div>
     </div>
 
-    <br>
+      <canvas id="stl_model"></canvas>
+      
     <div class="container">
+      <hr class="featurette-divider">
+    
 
+    
     <!-- <hr class="featurette-divider"> -->
     <!-- mettre le modele impression 3d si possible avec three js -->
     <div class="row featurette">
@@ -151,7 +155,12 @@
 
     </div>
 
+
     <script src="../../src/js/bootstrap.bundle.min.js"></script>
     <script src="../../src/js/home_page.js"></script>
+    <script type="module" src="../../src/js/keyboard.js"></script>
+
+  
+
 </body>
 </html>
