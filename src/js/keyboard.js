@@ -1,7 +1,6 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
-import * as GLTFLoader from 'https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js';
-import * as OrbitControls from 'https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js';
-
+import { GLTFLoader } from 'https://unpkg.com/three@0.127.0/examples/js/loaders/GLTFLoader.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js';
 
 window.scrollTo(0, 0);
 const scene = new THREE.Scene();
