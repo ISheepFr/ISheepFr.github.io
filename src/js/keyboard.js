@@ -1,4 +1,4 @@
-import './projets/keyboard/stylesheet.css'
+import '/projets/keyboard/stylesheet.css'
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js'
