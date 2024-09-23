@@ -29,14 +29,45 @@ camera.position.z = 16.073784580717042;
 scene.background = new THREE.Color('#212529');
 
 
-const light = new THREE.DirectionalLight(0xffffff,7);
-const rgb_light = new THREE.DirectionalLight(0xffffff,3);
+const light = new THREE.DirectionalLight(0xffffff,5);
+const light_2 = new THREE.DirectionalLight(0xffffff,3);
+const light_3 = new THREE.DirectionalLight(0xffffff,3);
+const light_4 = new THREE.DirectionalLight(0xffffff,3);
+const light_5 = new THREE.DirectionalLight(0xffffff,3);
+
+const light_under = new THREE.AmbientLight(0xffffff,1);
+
+const rgb_light = new THREE.DirectionalLight(0xffffff,1);
+
+let help_light = new THREE.DirectionalLightHelper(light);
+let help_light_2 = new THREE.DirectionalLightHelper(light_2);
+let help_light_3 = new THREE.DirectionalLightHelper(light_3);
+let help_light_4 = new THREE.DirectionalLightHelper(light_4);
+let help_light_5 = new THREE.DirectionalLightHelper(light_5);
+
+//scene.add(help_light);
+//scene.add(help_light_2);
+//scene.add(help_light_3);
+//scene.add(help_light_4);
+//scene.add(help_light_5);
+
+scene.add(light);
+scene.add(light_2);
+scene.add(light_3);
+scene.add(light_4);
+scene.add(light_5);
+scene.add(light_under);
+
 let hue = 0;
 
 
 
-light.position.set(3,50,10);
-light.power = 5.5;
+light.position.set(3,10,10);
+light_2.position.set(0, 0, -20);
+light_3.position.set(0, 0, 15);
+light_4.position.set(-20,5,0);
+light_5.position.set(25,5,0);
+light_under.position.set(4,-10, -1);
 
 rgb_light.position.set(0,3,0);
 
@@ -73,7 +104,6 @@ loader.load(
     }
 );
 
-scene.add(light);
 
 function animateLightColor() {
     hue += 0.001;
