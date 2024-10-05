@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Balloon Pop Simulation</title>
+
+  <link rel="stylesheet" href="../../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../src/css/stylesheet.css">
+
+  <script src="../../src/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-1">
+          <h1 class="display-5 fw-bold text-white">Balloon Pop Simulation</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">Project written in C++ with OpenCV</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="home_page" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Home page</button>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <iframe src="https://drive.google.com/file/d/1s0KWUmGOEMkFaT636AeWmO9QXsmLaHdu/preview" width="800" height="450" allow="autoplay"></iframe>
+
+    </div>
+
+    <br>
+    <div class="container">
+
+        <!-- <hr class="featurette-divider"> -->
+    
+        <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Description</h2>
+              <p class="lead">This project is a balloon-popping game where the player uses a red pen to pop balloons (circles) on the screen. The objective is to increase the score by popping balloons before the screen fills up. The game involves:</p>
+              <ul> 
+            
+                <li class="lead">Pen-based control: Using a red pen, the player interacts with the game, popping balloons that collide with the pen as detected by the camera.</li>
+               <br>
+                <li class="lead">Gameplay: The balloons appear randomly on the screen, and the player must pop them to score points. The difficulty level increases the speed and number of balloons.</li>
+                <br>
+                <li class="lead">Ending Condition: The game ends when the player press ESC.</li>
+    
+            </ul>
+            </div>
+        
+            <div class="col-md-5 text-center">
+              <br>
+              <br><br><br><br>
+                <img class="featurette-image img-fluid mx-auto rounded" src="img/menu.png" width="400" height="400" alt="Menu of program">
+                
+                <figcaption class="fst-italic mt-3 lead"> Menu</figcaption>
+                </div>
+            </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <br>
+              <h2 class="featurette-heading fw-normal lh-1">Pen Detection</h2>
+              
+              <p class="lead">When the game starts, the camera feed is displayed. The player uses a red pen to pop balloons by moving it in front of the camera. The game detects the red color from the pen to determine collisions with the balloons.</p>
+              <p class="lead">As the player moves the pen towards a balloon, the game checks if the red color from the pen is inside the balloon’s area. If detected, the balloon pops, and the score increases.</p>
+    
+              <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 lead">
+                <u>Note:</u> The concept for this project was inspired by <a href="https://www.youtube.com/watch?v=aMbPyFoGxdU" >this video</a> from the University of Waterloo 
+              </div>
+              <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+              -->
+            </div>
+    
+            <div class="col-md-5 text-center">
+                <br>
+                  <img class="featurette-image img-fluid mx-auto rounded" src="img/gameplay.png" width="400" height="400" alt="pen detection">
+                  <figcaption class="fst-italic mt-3 lead"> Gameplay</figcaption>
+                  </div>
+          
+        </div> 
+        
+      </div>
+    
+    
+<br>
+
+    <script src="../../src/js/home_page.js"></script>
+</body>
+</html>
