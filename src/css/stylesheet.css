@@ -1,0 +1,41 @@
+.magie:hover{
+    filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.6));
+    transform: scale(1.1);
+    }
+
+.magie{
+transition: all .1s ease-in-out;
+}
+
+.magie{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* Boutons de tri */
+.filter-btn {
+    border-radius: 20px; /* Augmente le border-radius des boutons */
+    padding: 10px 20px;  /* Ajuste le padding pour un look plus arrondi */
+    font-size: 1.1rem;   /* Augmente légèrement la taille de la police */
+}
+.filter-btn:hover {
+    color: white; /* Change la couleur du texte en blanc lors du survol */
+}
+.btn-outline-warning:hover {
+    background-color: #ffc107; /* Jaune pour Python */
+    border-color: #ffc107; /* Jaune pour Python */
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd; /* Bleu pour C++ */
+    border-color: #0d6efd; /* Bleu pour C++ */
+}
+
+.btn-outline-dark:hover {
+    background-color: #212529; /* Noir pour All */
+    border-color: #212529; /* Noir pour All */
+}
+
+

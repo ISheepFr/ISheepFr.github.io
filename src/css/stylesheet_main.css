@@ -1,0 +1,169 @@
+/* Section pour les cartes, positionnée à droite */
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alignement à droite */
+    grid-column: 8 / 13; /* Positionnement sur les colonnes de droite */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: fixed;
+  }
+  
+  /* Profile card */
+  .profile-card, .text-card {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 38rem; /* Ou ajustez en fonction de la taille souhaitée */
+  }
+  
+  #text_card_css {
+    display: flex;
+    justify-content: flex-end; /* Alignement à droite */
+    margin-bottom: 20px;
+  }
+  
+  body {
+    position: relative;
+    margin: 0;
+    overflow: auto; /* Empêche le défilement par défaut */
+    overflow-x: hidden;
+   pointer-events: none; /* Disable all pointer events on the body */
+ 
+}
+
+#animation-trigger {
+    height: 0px; /* Hauteur de la section de déclenchement */
+    /*background-color: rgb(255, 0, 0); /* Juste pour visualisation */
+}
+
+#navbar{
+    pointer-events: auto;
+}
+
+#bg {
+    position: absolute; /* Fixe le canevas */
+    top: auto;
+    left: 0;
+    width: 100%;
+    /*height: 100vh; /* Remplit toute la hauteur de la fenêtre */
+    z-index: -1; /* Place le canevas derrière les autres éléments */
+}
+
+main {
+    position: relative; /* Permet de superposer les éléments */
+    z-index: 1; /* Assure que le contenu de main est au-dessus du canevas */
+    height: 400vh; /* Donne de la hauteur au main pour le défilement */
+    pointer-events: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 colonnes */
+    width: 100vw;
+    color: white;
+    padding: 90px 0;
+}
+  
+  section, #info, blockquote {
+    /*border: 1px solid red; /* Ajoute une bordure rouge pour chaque section */
+    /*background-color: rgba(255, 0, 0, 0.1); /* Arrière-plan léger pour mieux visualiser */
+  }
+  
+  /*
+  main {
+    width: 100vw;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto;
+    padding: 120px 0px;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  */
+  
+  .text-muted {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .desc_txt{
+    color: black;
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+  
+  .custom-btn {
+    color: black; /* Set button text color to black */
+    border-color: black; /* Set border color to black */
+  }
+  
+  .custom-btn:hover {
+    background-color: black; /* On hover, background becomes black */
+    color: white; /* On hover, text becomes white */
+  }
+  
+  canvas {
+    pointer-events: auto;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+  }
+  
+  :root {
+    --dark-bg: rgba(15, 15, 15, 0.95);
+    --spacing: 350px;
+  
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  h1, h2, h3, blockquote {
+    font-family: elevon, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  
+  
+  
+  
+    header {
+      background: var(--dark-bg);
+      grid-column: 2 / span 5;
+      font-size: 2.5rem;
+      padding: 2rem;
+      margin-bottom: var(--spacing);
+    }
+  
+    section {
+      grid-column: 2 / 8;
+      padding: 1rem;
+      background: var(--dark-bg);
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-bottom: var(--spacing);
+    }
+  
+    blockquote {
+      margin: 0;
+      padding: 0;
+      grid-column: 2 / span 9;
+      margin-bottom: var(--spacing);
+    }
+  
+    blockquote p {
+      color: black;
+      background-color: white;
+      font-size: 4rem;
+      display: inline;
+      line-height: 1;
+    }
+  
+    .left {
+      grid-column: 6 / 12;
+    }

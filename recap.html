@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/stylesheet.css">
+</head>
+
+<body>
+
+    
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-1">
+            <h1 class="text-white">List of all my projects</h1>
+            <br>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">All projects are gathered here, you can find everything like C++, Python, QML, OpenCV framework applied to various fields such as networks, electronics, Machine Learning, reinforcement learning, HMI and even embedded systems</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button id="home_page" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Home page</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Sorting Buttons -->
+    <div class="container text-center mb-4">
+        <button class="btn btn-outline-dark filter-btn fw px-4" data-filter="all">All projects</button>
+        <button class="btn btn-outline-primary filter-btn px-4" data-filter="cpp">C++</button>
+        <button class="btn btn-outline-warning filter-btn px-4" data-filter="python">Python</button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id="voronoi" class="col-lg-4 mb-4 col-6 python">
+                <a href="projets/voronoi/voronoi.html" style="text-decoration: none; color: inherit;">
+                <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
+                    <div class="card-border">
+                        <img src="projets/voronoi/img/home.png" class="card-img-top"  alt="voronoi generator" style="border-top-left-radius: 12px; border-top-right-radius: 12px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Voronoi generator</h5>
+                            <span class="badge rounded-pill text-bg-warning">Python</span> <br><br>
+                            <p class="card-text lead">Generates Voronoi diagrams and applies them to images</p>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+            </a>
+            </div>
+
+    
+            <div id="keyboard" class="col-lg-4 mb-4 col-6 cpp">
+                <a href="projets/keyboard/keyboard.html" style="text-decoration: none; color: inherit;">
+                <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
+                    <div class="card-border">
+                        <img src="projets/keyboard/img/model_3d.png" class="card-img-top" alt="3d model" style="border-top-left-radius: 12px; border-top-right-radius: 12px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ESP32 BLE Keyboard</h5>
+                            <span class="badge rounded-pill text-bg-primary">C++</span> <span class="badge rounded-pill text-bg-primary">Arduino</span><br><br>
+                            <p class="card-text lead">A 9-key Bluetooth keyboard with customizable profiles for quick key binding swaps</p>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+            </a>
+            </div>
+
+
+            <div id="qrcode" class="col-lg-4 mb-4 col-6 python">
+                <a href="projets/qrcode/qrcode.html" style="text-decoration: none; color: inherit;">
+                <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
+                    <div class="card-border">
+                        <img src="projets/qrcode/img/2_dissimulated_qr.png" class="card-img-top" alt="qrcode" style="border-top-left-radius: 12px; border-top-right-radius: 12px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">QRCode hider</h5>
+                            <span class="badge rounded-pill text-bg-warning">Python</span> <br><br>
+                            <p class="card-text lead">Implements features like generating, hiding, and extracting QR codes, including support for multiple QR codes</p>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+            </a>
+            </div>
+
+
+
+        </div>
+    </div>
+    
+
+    
+
+    <script src="src/js/home_page.js"></script>
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/sort_recap.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
