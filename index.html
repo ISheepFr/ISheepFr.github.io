@@ -14,9 +14,10 @@
     <h1>Welcome to my portfolio, currently building...</h1>
 
     <div class="d-grid gap-2 col-6 mx-auto">
-        <button id="voronoi" class="btn btn-primary" type="button">Project voronoi</button>
+        <button id="voronoi" class="btn btn-primary" type="button">Voronoi's image generator</button>
         <!-- <button id="rlbot" class="btn btn-primary" type="button">Project rlbot</button> -->
-        <button id="keyboard" class="btn btn-primary" type="button">Project keyboard</button>
+        <button id="keyboard" class="btn btn-primary" type="button">DIY Keyboard</button>
+        <button id="qrcode" class="btn btn-primary" type="button">QRCode hider</button>
     </div>
 
 
@@ -34,6 +35,10 @@
 
         document.getElementById('keyboard').addEventListener('click', function() {
             window.location.href = 'projets/keyboard/keyboard.html';  
+        });
+
+        document.getElementById('qrcode').addEventListener('click', function() {
+            window.location.href = 'projets/qrcode/qrcode.html';  
         });
 
     </script>

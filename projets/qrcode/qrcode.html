@@ -43,64 +43,115 @@
           <p class="lead">The implemented features are listed below :</p>
           <ul> 
 
-            <li class="lead">Generate a QR Code</li>
-            <li class="lead">Hide a QR Code in a host QR</li>
-            <li class="lead">Extract a QR Code from an augmented QR</li>
-            <li class="lead">Hide multiple QR Codes in a host QR</li>
-            <li class="lead">Extract multiple QR Codes from an augmented QR</li>
+            <li class="lead">Generate a QR code</li>
+            <li class="lead">Hide a QR code in a host QR</li>
+            <li class="lead">Extract a QR code from an augmented QR</li>
+            <li class="lead">Hide multiple QR codes in a host QR</li>
+            <li class="lead">Extract multiple QR codes from an augmented QR</li>
 
         </ul>
         </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="" width="300" height="300" alt="Menu of program">        </div>
+    
+        <div class="col-md-5 text-center">
+          <br>
+            <img class="featurette-image img-fluid mx-auto rounded" src="img/menu.png" width="400" height="400" alt="Menu of program">
+            <figcaption class="fst-italic mt-3 lead"> Main menu</figcaption>
+            </div>
         </div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">Generate QR Code </h2>
+          <br>
+          <h2 class="featurette-heading fw-normal lh-1">Generate QR code </h2>
+          
+          <p class="lead">The QR code is generated with the <a href="https://pypi.org/project/qrcode/" target="_blank">qrcode library </a>.</p>
+          <p class="lead">The user enters two parameters: the name of the QR code to save as a .png file and the text related to this QR code.</p>
+          <p class="lead">You can see on the left two generated QR codes with the text "i'm a normal qr!" and "shh i'm a secret qr!", you can try it out!</p>
 
-          <p class="lead">The QR code is generated with the <a href="https://pypi.org/project/qrcode/" target="_blank">qrcode library </a>. The user enters two parameters:</p>
-
-          <ul class="list-group list-group-flush"> 
-            <li class="lead ">QR Code name</li>
-            <li class="lead ">Text to insert</li>
-        </ul>
+          <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 lead">
+            <u>Note:</u> The next goal is to hide the secret qr in the normal one
+          </div>
           <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
           -->
         </div>
-        <div class="col-md-5 order-md-1">
-          <br>
-          
-          <figure class="text-center">
-            <img class="featurette-image img-fluid mx-auto rounded" src="img/cropped.png" width="500" height="500" alt="wooloo">
-            <figcaption class="fst-italic mt-3 lead">
-                Input image :  <a href="https://teivadict.artstation.com/projects/oOB06q" target="_blank"> <cite title="Source Title"> Wooloo by Teiva Roche</cite></a>
-                <br><cite title="Source Title"> nbseeds : 1500</cite>
-            </figcaption>
-        </figure>
 
-        </div>
+        <div class="col-md-5 order-md-1">
+          <div class="row">
+              <div class="col-md-6">
+                  <figure class="text-center">
+                      <img class="featurette-image img-fluid mx-auto rounded" src="img/1_normal_qr.png" width="250" height="250" alt="normal qr">
+                      <figcaption class="fst-italic mt-3 lead">Normal QR code ~ 600 Bytes</figcaption>
+                  </figure>
+              </div>
+              <div class="col-md-6">
+                  <figure class="text-center">
+                      <img class="featurette-image img-fluid mx-auto rounded" src="img/2_secret_qr.png" width="250" height="250" alt="secret qr">
+                      <figcaption class="fst-italic mt-3 lead">Secret QR code ~ 550 Bytes</figcaption>
+                  </figure>
+              </div>
+          </div>
+      </div>
+      
     </div>
       
     <hr class="featurette-divider">
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Output</h2>
-        <p class="lead">If an image path parameters is filled, the output will be Voronoi's diagram on the image. If no image path is filled, the computation is done on a black background, giving us a similar output image as the Description section. </p>
+        <h2 class="featurette-heading fw-normal lh-1">Hide QR code</h2>
+        <p class="lead">Now that we have two separated QR codes, let's hide the secret one in the host and take a look at the augmented qr created. </p>
+        <p class="lead">The user choose the host, the QR code to hide and the number of voronoi's seeds.</p>
+        <p class="lead">The hiding process use a Voronoi diagram approach. The Voronoi key is stored in a text file for reference. The augmented QR code is then displayed and saved as an image. </p>
+        <p class="lead">The image on the right shows us the QR code augmented using the QR codes from above.</p>
+
       </div>
       <div class="col-md-5">
         <figure class="text-center">
-          <img class="featurette-image img-fluid mx-auto rounded" src="img/voronoied.png" width="500" height="500" alt="wooloo">
-          <figcaption class="fst-italic mt-3 lead">
-              Output image : <cite title="Source Title">Voronoied Wooloo</cite></a>
-          </figcaption>
+          <img class="featurette-image img-fluid mx-auto rounded" src="img/2_dissimulated_qr.png" width="300" height="300" alt="augmented qr">
+          <figcaption class="fst-italic mt-3 lead">Augmented QR code ~ 9 Kilobytes</figcaption>
       </figure>
       </div>
 
     </div>
+
+    
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <br>
+        <h2 class="featurette-heading fw-normal lh-1">Extract QR code </h2>
+        
+        <p class="lead">The extraction involves two main parts: selecting the augmented QR code and its associated Voronoi key, then using that key to recover the secret QR code.</p>
+        <p class="lead">This process uses the Voronoi key to identify and combine binary pixel values from the augmented QR code, reconstructing the hidden original image.</p>
+        <p class="lead">You can see the extraction process of the augmented qrand the final result in the pictures on the left. You can even test it with a QR reader!</p>
+        <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        -->
+        <div class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 lead">
+          <u>Note:</u> The <strong>hiding and extraction on multiple images works almost the same way</strong> , only the mathematical formulas differ. They are just more complex.
+        </div>
+
+      </div>
+
+      <div class="col-md-5 order-md-1">
+        <br><br>
+        <div class="row">
+                <figure class="text-center">
+                    <img class="featurette-image img-fluid mx-auto rounded" src="img/3_extract.png" alt="extraction">
+                    <figcaption class="fst-italic mt-3 lead">Extracted secret QR</figcaption>
+                </figure>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+  </div>
+<br>
 
     <script src="../../src/js/home_page.js"></script>
 </body>
