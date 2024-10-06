@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>3D Lunges infection Visualization with AI and Aruco</title>
+
+  <link rel="stylesheet" href="../../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../src/css/stylesheet.css">
+
+  <script src="../../src/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-1">
+          <h1 class="display-5 fw-bold text-white">3D Lunges infection Visualization with AI and Aruco</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">Project written in Python with OpenCV</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="home_page" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Home page</button>
+              <button id="projects_page" class="btn btn-outline-warning btn-lg px-4 me-sm-3 fw-bold">Projects Lists</button>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <iframe src="https://drive.google.com/file/d/1fyOR2ap6d1n3ChyLxftcVbP986cJ8wVD/preview" width="800" height="450" allow="autoplay"></iframe>
+
+    </div>
+
+    <br>
+
+    <div class="container">
+
+        <div class="row featurette">
+            <div class="col-md">
+                <h2 class="featurette-heading fw-normal lh-1">Description</h2>
+                <p class="lead">
+                    This project visualizes lung infection data by generating a heatmap from AI predictions, creating a 3D model of infection zones, and displaying it in augmented reality using ArUco markers for an interactive analysis of lung health.
+                </p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Model Creation and Training</h2>
+                <p class="lead">
+                    The core of this project revolves around using an AI model to generate attention maps that highlight potential infection zones in 3D lungs. The model, based on 
+                    <a href="https://github.com/bouthainas/ViTReg-IP/tree/main">ViTReg-IP</a>, was trained on the RALO dataset. </p>
+                <p class="lead">
+                    The training process required creating a <code>RaloDataset</code> class (handled by <code>data.py</code>) to prepare and normalize the data.
+                    I modified the model architecture in <code>net.py</code> from Inception to <code>vit_tiny_patch16_224</code> to generate attention maps. Additionally, functions were updated for compatibility with modern syntax (<a href="https://stackoverflow.com/questions/70790473/pytorch-lightning-epoch-end-validation-epoch-end">see there</a>).
+                </p>
+                <p class="lead">
+                    To utilize the trained model, I created <code>using_net.py</code>, a script that loads the pre-trained model and generates heatmaps from test images. 
+                </p>
+                <p class="lead">
+                    The most important file, <code>Attention_map.py</code>, takes as input an image, its corresponding mask from the <a href="https://www.kaggle.com/datasets/nikhilpandey360/chest-xray-masks-and-labe
+                    ls/.com/BryceQing/OPENCV_AR">Kaggle</a> dataset, and the path for saving the resulting heatmap.
+                    This file calls the model, passes the image and mask, and outputs the heatmap, which is then saved for visualization.
+                </p>
+            </div>
+            <div class="col-md-5 text-center">
+                <div>
+                   <img class="featurette-image img-fluid mx-auto rounded" src="img/CHNCXR_0002_0.png" width="200" height="200" alt="input">
+                    <img class="featurette-image img-fluid mx-auto rounded" src="img/CHNCXR_0002_0_mask.png" width="200" height="200" alt="input mask"> 
+                <figcaption class="fst-italic mt-3 lead">AI Model Input</figcaption>
+                </div>
+                <br>
+                <div>
+                    <img class="featurette-image img-fluid mx-auto rounded" src="img/heatmap.png" width="200" height="200" alt="input">
+                    <img class="featurette-image img-fluid mx-auto rounded" src="img/heatmap_fusion.png" width="200" height="200" alt="input mask"> 
+                    <figcaption class="fst-italic mt-3 lead">AI Model Output</figcaption>
+                </div>
+                
+            </div>
+        </div>
+
+    <hr class="featurette-divider">
+
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">3D Model Creation</h2>
+            <p class="lead">
+                The second phase of this project involves transforming the heatmap generated from the AI model into a 3D model represented by OBJ and MTL files. 
+                This is handled by the <code>sphere.py</code> script, which analyzes the heatmap and places spheres at key locations corresponding to infection zones detected in the lungs.
+            </p>
+            <p class="lead">
+                The script calculates the distance between the infection zones (yellow regions on the heatmap) and nearby points to define sphere placement. 
+            </p>
+            <p class="lead">
+                Each sphere is positioned based on the pixel's location and color, creating a visual representation of the infection's spread. 
+                The script then saves the 3D object and material files for later visualization.
+            </p>
+            <p class="lead">
+                A sensitive threshold parameter can be passed to the script to influence the number of spheres modeled. This sensitivity can sometimes lead to the visualization of points at the edges of the heatmap,
+                <strong><i>which may not</i> </strong> represent significant infection zones.            </p>
+        </div>
+        <div class="col-md-5 order-md-1 text-center">
+            <br>
+            <img class="featurette-image img-fluid mx-auto rounded" src="img/heatmap_model.png" width="400" height="400" alt="3D Model Creation">
+            <figcaption class="fst-italic mt-3 lead">3D Model generated from heatmap</figcaption>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Displaying 3D Model with Aruco Marker</h2>
+            <p class="lead">
+                The third phase of this project involves displaying the 3D model using an Aruco marker. This implementation is based on the 
+                <a href="https://github.com/BryceQing/OPENCV_AR" target="_blank">OpenCV_AR GitHub repository</a>, which required modifications to ensure the code functions correctly and allows for multiple models to be displayed simultaneously.
+            </p>
+            <p class="lead">
+                For this purpose, a 3D model of lungs was utilized, which can be found at 
+                <a href="https://sketchfab.com/3d-models/anatomy-of-the-airways-opaque-lungs-1cd55d26c1254ab7a5d0845fb9a207fe" target="_blank">this link</a>. 
+                The model was scaled in Blender to perfectly fit the heatmap generated in the previous step.
+            </p>
+            <p class="lead">
+                Once the lungs model is ready, the 3D model generated from the heatmap is displayed on top of it, providing a comprehensive visualization of the infection zones.
+                The <code>ar_entrance.py</code> file is used to launch the application, requiring the path to the 3D model of the heatmap as a parameter.
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1 text-center">
+            <br><br><br><br>
+            <img class="featurette-image img-fluid mx-auto rounded" src="img/result.png" alt="Displaying 3D Model with Aruco Marker">
+            <figcaption class="fst-italic mt-3 lead">3D Model displayed with Aruco Marker</figcaption>
+        </div>
+    </div>
+    
+
+
+    </div>
+  
+<br>
+
+    <script src="../../src/js/home_page.js"></script>
+</body>
+</html>
