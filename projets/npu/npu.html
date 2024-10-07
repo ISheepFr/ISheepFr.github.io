@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Neural Processing Unit test</title>
+
+  <link rel="stylesheet" href="../../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../src/css/stylesheet.css">
+
+  <script src="../../src/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+
+<style>
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  
+    .video-wrapper {
+      display: flex;
+      flex-direction: column;  /* Empile les éléments verticalement */
+      align-items: center;     /* Centre les éléments horizontalement */
+      margin: 10px;
+    }
+  
+    iframe {
+      width: 300px; /* Réduction de la taille des vidéos */
+      height: 170px;
+    }
+  
+    figcaption {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center; /* Centre le texte de la légende */
+    }
+  </style>
+
+<body>
+
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-1">
+          <h1 class="display-5 fw-bold text-white">Neural Processing Unit test</h1>
+          <div class="col-lg-6 mx-auto">
+
+          <!-- ADD UN TRUC SUREMENT  --><p class="fs-5 mb-4"></p>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="home_page" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Home page</button>
+              <button id="projects_page" class="btn btn-outline-warning btn-lg px-4 me-sm-3 fw-bold">Projects Lists</button>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div>
+            <br>
+            <iframe src="https://drive.google.com/file/d/1KF_KMh06qVjfFLpRhAJmOKj14w-GFOEP/preview" width="546" height="312"></iframe>
+            <figcaption class="h1 fw-bold text-white">NPU realtime detection</figcaption>
+        </div>
+
+
+    </div>
+
+    <br>
+    <div class="container">
+
+    <!-- <hr class="featurette-divider"> -->
+
+    <div>
+        <br>
+        <iframe src="https://drive.google.com/file/d/15Yas30JSGAqwmpCNIT1I1tf_mOr3v3J8/preview" width="546" height="312"></iframe>
+        <figcaption class="lead mt-3">Original video input</figcaption>   
+    </div>
+
+    <div>
+        <br>
+        <iframe src="https://drive.google.com/file/d/1UUNBLEqSTw-1VP2oDhzCYnmSomhJE3zv/preview" width="546" height="312"></iframe>
+        <figcaption class="lead mt-3">CPU 1 Thread detection</figcaption>   
+    </div>
+
+    <div>
+        <br>
+        <iframe src="https://drive.google.com/file/d/18CugIGQNPOJmmzkuHShK5CwCc24GwoFs/preview" width="546" height="312"></iframe>
+        <figcaption class="lead mt-3">CPU 4 Thread detection</figcaption>   
+    </div>
+
+
+
+
+    </div>
+<br>
+
+    <script src="../../src/js/home_page.js"></script>
+</body>
+</html>
