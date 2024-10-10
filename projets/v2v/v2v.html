@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Protoype of a Vehicule 2 Vehicule connexion simulation</title>
+
+  <link rel="stylesheet" href="../../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../src/css/stylesheet.css">
+
+  <script src="../../src/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-1">
+          <h1 class="display-5 fw-bold text-white">Protoype of a Vehicule 2 Vehicule connexion simulation</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">Project written in C++, QML, with QT and OpenStreetMap</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="home_page" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Home page</button>
+              <button id="projects_page" class="btn btn-outline-warning btn-lg px-4 me-sm-3 fw-bold">Projects Lists</button>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <iframe src="https://drive.google.com/file/d/1n__tjVeFi91JyKjazRsDWQzwi0BIC0C9/preview" width="800" height="450" allow="autoplay"></iframe>
+
+    </div>
+
+    <br>
+
+    <div class="container">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Description</h2>
+                <p class="lead">This project visualizes vehicle-to-vehicle (V2V) communication in the context of connected vehicles using 5G technology. The tool simulates vehicle movement and communication propagation over an OpenStreetMap-based environment.</p>
+                <ul> 
+                    <li class="lead">Hexagonal Grid: The environment is structured using a grid of hexagonal cells for accurate communication modeling.</li>
+                    <br>
+                    <li class="lead">Vehicle Simulation (Prototype): Users can configure vehicle properties such as speed, emission power, and communication frequency, but many functions are not yet implemented, making this a prototype.</li>
+                    <br>
+                    <li class="lead">Dynamic Visualization: Real-time updates of vehicle movement and communication status on the map.</li>
+                </ul>
+            </div>
+        
+            <div class="col-md-5 text-center">
+                <br>
+                
+                <img class="featurette-image img-fluid mx-auto rounded" src="img/proto.png" alt="V2V Communication Visualization">
+                <figcaption class="fst-italic mt-3 lead">V2V Communication Visualization</figcaption>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">C++ Code Organization</h2>
+                <p class="lead">The C++ part of this project handles the core simulation logic, focusing on the creation of the environment, vehicles, and communication modeling. The code is organized into various classes to ensure modularity and clarity.</p>
+                <ul> 
+                    <li class="lead">Hexagon Class: Defines each hexagonal cell's attributes, such as position, neighbors, and color for the simulation grid.</li>
+                    <br>
+                    <li class="lead">Grid Class: Manages the entire grid of hexagons, including functions for creating the grid and accessing neighboring hexagons for communication purposes.</li>
+                    <br>
+                    <li class="lead">Vehicle Class: Represents individual vehicles with properties like position, speed, emission power, and movement options. This class serves as the foundation for vehicle interaction and communication.</li>
+                    <br>
+                    <li class="lead">Main C++ File: Converts the C++ classes into QML-compatible objects, enabling their use in the graphical interface.</li>
+                </ul>
+            </div>
+        
+            <div class="col-md-5 order-md-1 text-center">
+                <br>
+                
+                <img class="featurette-image img-fluid mx-auto rounded" src="img/visualize.png" alt="C++ Code">
+                <figcaption class="fst-italic mt-3 lead">Simulation visualization</figcaption>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">QML Integration and Usage</h2>
+                <p class="lead">The QML layer of this project provides a user-friendly interface for interacting with the vehicle-to-vehicle (V2V) communication simulation. It integrates with the C++ backend to utilize the simulation logic.</p>
+                <ul> 
+                    <li class="lead">Main QML File: Acts as the central point for the application layout, displaying the simulation grid and components, while facilitating user input for configuration.</li>
+                    <br>
+                    <li class="lead">HexagonItem.qml: Responsible for rendering each hexagonal cell on the grid, utilizing properties defined in the C++ Hexagon class for visual representation.</li>
+                    <br>
+                    <li class="lead">VehicleItem.qml: Displays vehicles on the grid, leveraging data from the C++ Vehicle class to dynamically show their positions and states in the simulation.</li>
+                    <br>
+                    <li class="lead">Function Calls: QML can directly invoke C++ functions to modify vehicle parameters and retrieve simulation data, ensuring a smooth interaction between the visual interface and the underlying logic.</li>
+                </ul>
+            </div>
+        
+            <div class="col-md-5 text-center">
+                <br>
+                <br><br>
+                <img class="featurette-image img-fluid mx-auto rounded" src="img/menu.png" alt="QML Integration">
+                <figcaption class="fst-italic mt-3 lead">QML settings menu</figcaption>
+            </div>
+        </div>
+        
+        
+    
+    </div>    
+    
+<br>
+
+    <script src="../../src/js/home_page.js"></script>
+</body>
+</html>
