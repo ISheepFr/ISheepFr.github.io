@@ -6,7 +6,7 @@
     grid-column: 8 / 13; /* Positionnement sur les colonnes de droite */
     margin-bottom: 20px;
     margin-top: 20px;
-    position: fixed;
+    position: relative;
   }
   
   /* Profile card */
@@ -25,11 +25,10 @@
   }
   
   body {
-    position: relative;
     margin: 0;
     overflow: auto; /* Empêche le défilement par défaut */
     overflow-x: hidden;
-   pointer-events: none; /* Disable all pointer events on the body */
+   pointer-events: auto; /* Disable all pointer events on the body */
  
 }
 

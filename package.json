@@ -4,12 +4,12 @@
     "three": "^0.168.0"
   },
   "devDependencies": {
-    "vite": "^5.4.6"
+    "vite": "^5.4.8"
   },
   "scripts": {
-  "deploy" : "gh-pages -d public",
-  "dev": "vite",
-  "build": "vite build",
-  "serve": "vite preview"
+    "deploy": "gh-pages -d public",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   }
 }
