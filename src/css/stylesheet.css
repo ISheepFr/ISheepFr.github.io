@@ -14,7 +14,13 @@ transition: all .1s ease-in-out;
     margin-bottom: 2%;
 }
 
-/* Boutons de tri */
+.card {
+    height: 98%; /* Permet aux cartes de s'adapter à la même hauteur */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
 .filter-btn {
     border-radius: 20px; /* Augmente le border-radius des boutons */
     padding: 10px 20px;  /* Ajuste le padding pour un look plus arrondi */
@@ -38,4 +44,14 @@ transition: all .1s ease-in-out;
     border-color: #212529; /* Noir pour All */
 }
 
+/* Répartir les checkboxes en lignes de 3 */
+.form-check-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-check {
+    width: 33.33%; /* Chaque checkbox occupe 1/3 de la ligne */
+    padding: 5px;
+}
 

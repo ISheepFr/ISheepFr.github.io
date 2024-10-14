@@ -28,15 +28,44 @@
     <br>
 
     <!-- Sorting Buttons -->
-    <div class="container text-center mb-4">
-        <button class="btn btn-outline-dark filter-btn fw px-4" data-filter="all">All projects</button>
-        <button class="btn btn-outline-primary filter-btn px-4" data-filter="cpp">C++</button>
-        <button class="btn btn-outline-warning filter-btn px-4" data-filter="python">Python</button>
+    <div id="bar" class="container text-center mb-4">
+        <!-- Bouton "All Projects" -->
+        <button class="btn btn-outline-dark filter-btn fw px-4 d-inline-block" data-filter="all">All Projects</button>
+    
+        <!-- Dropdown pour "Filter by Tags" avec menu à droite -->
+        <div class="dropdown d-inline-block ms-3">
+            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter by Tags
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="dropdownMenuButton">
+              <li class="form-check-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cpp" value="cpp">
+                  <label class="form-check-label" for="cpp">C++</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="python" value="python">
+                  <label class="form-check-label" for="python">Python</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="opencv" value="opencv">
+                  <label class="form-check-label" for="opencv">Open CV</label>
+                </div>
+              </li>
+              <!-- Ajoutez plus de tags si nécessaire -->
+            </ul>
+        </div>
     </div>
+    
 
-    <div class="container">
+
+    <div id="cont_cards" class="container">
         <div class="row">
-            <div id="voronoi" class="col-lg-4 mb-4 col-6 python">
+            <div id="voronoi" class="card_sort col-lg-4 mb-4 col-6 python">
                 <a href="projets/voronoi/voronoi.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -54,7 +83,7 @@
             </div>
 
     
-            <div id="keyboard" class="col-lg-4 mb-4 col-6 cpp">
+            <div id="keyboard" class="card_sort col-lg-4 mb-4 col-6 cpp">
                 <a href="projets/keyboard/keyboard.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -72,7 +101,7 @@
             </div>
 
 
-            <div id="qrcode" class="col-lg-4 mb-4 col-6 python">
+            <div id="qrcode" class="card_sort col-lg-4 mb-4 col-6 python">
                 <a href="projets/qrcode/qrcode.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -90,7 +119,7 @@
             </div>
 
 
-            <div id="arucolunges" class="col-lg-4 mb-4 col-6 python opencv pytorch">
+            <div id="arucolunges" class="card_sort col-lg-4 mb-4 col-6 python opencv pytorch">
                 <a href="projets/arucolunges/arucolunges.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -107,7 +136,7 @@
             </a>
             </div>
 
-            <div id="colorgame" class="col-lg-4 mb-4 col-6 cpp opencv">
+            <div id="colorgame" class="card_sort col-lg-4 mb-4 col-6 cpp opencv">
                 <a href="projets/colorgame/colorgame.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -125,7 +154,7 @@
             </div>
 
 
-            <div id="redcirclegame" class="col-lg-4 mb-4 col-6 cpp opencv">
+            <div id="redcirclegame" class="card_sort col-lg-4 mb-4 col-6 cpp opencv">
                 <a href="projets/redcirclegame/redcirclegame.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -143,7 +172,7 @@
             </div>
 
 
-            <div id="controlmap" class="col-lg-4 mb-4 col-6 cpp opencv">
+            <div id="controlmap" class="card_sort col-lg-4 mb-4 col-6 cpp opencv">
                 <a href="projets/controlmap/controlmap.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -160,7 +189,7 @@
             </a>
             </div>
 
-            <div id="imageviewer" class="col-lg-4 mb-4 col-6 cpp opencv">
+            <div id="imageviewer" class="card_sort col-lg-4 mb-4 col-6 cpp opencv">
                 <a href="projets/imageviewer/imageviewer.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -178,7 +207,7 @@
             </div>
 
 
-            <div id="npu" class="col-lg-4 mb-4 col-6 linux python cpp opencv">
+            <div id="npu" class="card_sort col-lg-4 mb-4 col-6 linux python cpp opencv">
                 <a href="projets/npu/npu.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -196,7 +225,7 @@
             </a>
             </div>
 
-            <div id="v2v" class="col-lg-4 mb-4 col-6 cpp QT QML">
+            <div id="v2v" class="card_sort col-lg-4 mb-4 col-6 cpp QT QML">
                 <a href="projets/v2v/v2v.html" style="text-decoration: none; color: inherit;">
                 <div class="card magie" style="border-radius: 15px; border: 3px solid black !important;">
                     <div class="card-border">
@@ -218,7 +247,30 @@
     </div>
     
 
-    
+    <script>
+        window.onload = function() {
+            const images = document.querySelectorAll('.card img'); // Sélectionne toutes les images dans les cartes
+            
+            images.forEach((img) => {
+                if (img.complete) {
+                    // Si l'image est déjà complètement chargée (en cache par exemple)
+                    const width = img.width;   // Récupère la largeur de l'image
+                    const height = img.height; // Récupère la hauteur de l'image
+                    console.log(`Image (déjà chargée): ${img.src}, Width: ${width}px, Height: ${height}px`);
+                } else {
+                    // Sinon, on attend que l'image se charge
+                    img.onload = () => {
+                        const width = img.width;   // Récupère la largeur de l'image
+                        const height = img.height; // Récupère la hauteur de l'image
+                        console.log(`Image (après chargement): ${img.src}, Width: ${width}px, Height: ${height}px`);
+                    };
+                }
+            });
+        };
+        
+        console.log("Chargement du script terminé.");
+        </script>
+        
 
     <script src="src/js/home_page.js"></script>
     <script src="src/js/bootstrap.bundle.min.js"></script>
