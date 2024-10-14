@@ -31,12 +31,16 @@
     <div id="bar" class="container text-center mb-4">
         <!-- Bouton "All Projects" -->
         <button class="btn btn-outline-dark filter-btn fw px-4 d-inline-block" data-filter="all">All Projects</button>
-    
-        <!-- Dropdown pour "Filter by Tags" avec menu à droite -->
+        <button class="btn btn-outline-primary filter-btn px-4" data-filter="cpp">C++</button>
+        <button class="btn btn-outline-warning filter-btn px-4" data-filter="python">Python</button>
+        <button class="btn btn-outline-danger filter-btn px-4" data-filter="opencv">OpenCV</button>
+        <!--
         <div class="dropdown d-inline-block ms-3">
+            
             <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
               Filter by Tags
             </button>
+
             <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="dropdownMenuButton">
               <li class="form-check-group">
                 <div class="form-check">
@@ -56,9 +60,15 @@
                   <label class="form-check-label" for="opencv">Open CV</label>
                 </div>
               </li>
-              <!-- Ajoutez plus de tags si nécessaire -->
+              
+
             </ul>
+        
+
+          
         </div>
+        <span id="tagCount" style="display: none; margin-left: 50px;"></span>
+     -->
     </div>
     
 
