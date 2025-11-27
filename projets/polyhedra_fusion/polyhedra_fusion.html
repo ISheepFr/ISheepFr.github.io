@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Polyhedra fusion</title>
+
+  <link rel="stylesheet" href="../../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../src/css/stylesheet.css">
+
+  <script src="../../src/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-1">
+          <h1 class="display-5 fw-bold text-white">Polyhedra fusion</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">Project written in C++ 14</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="home_page" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Home page</button>
+              <button id="projects_page" class="btn btn-outline-warning btn-lg px-4 me-sm-3 fw-bold">Projects Lists</button>
+              <a href="https://github.com/ISheepFr/Fusion_Polyedres" target="_blank" class="bi-github btn btn-outline-light btn-lg px-4"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+                View on GitHub 
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="container">
+
+    <!-- <hr class="featurette-divider"> -->
+
+    <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Description</h2>
+          <p class="lead">This project aims to develop an algorithm for iteratively merging elementary convex polyhedra in order to minimize the number of resulting convex polyhedra.</p>
+          <p class="lead">The objective is to determine the optimal order in wich to merge the polyhedra to minimize this number. </p>
+          <p class="lead">The merging program reads a 3D file in *.obj format as input, merges the polyhedra together as much as possible, and writes a corresponding *.obj file that can be viewed, for example, in Blender.</p>
+          <p class="lead">The implemented features are listed below :</p>
+          <ul> 
+
+            <li class="lead">Polyhedra fusion</li>
+            <li class="lead">Convex fusion graph</li>
+            <li class="lead">Brute force, simulated annealing & genetic algorithm </li>
+            <!--<li class="lead">Simulated annealing algorithm </li>
+            <li class="lead">Genetic Algorithm</li>-->
+            <li class="lead">Saving/Displaying Results</li>
+
+        </ul>
+        </div>
+    
+        <div class="col-md-5 text-center">
+          <br>
+            <img class="featurette-image img-fluid mx-auto rounded" src="img/fusion.png" width="400" height="400" alt="Fusion of polyhedra (from 16 to 9)">
+            <figcaption class="fst-italic mt-3 lead"> Fusion of polyhedra (from 16 to 9)</figcaption> <br>
+            
+            <img class="featurette-image img-fluid mx-auto rounded" src="img/convex.png" width="400" height="400" alt="Optimal order of fusion">
+            <figcaption class="fst-italic mt-3 lead"> Optimal order of fusion</figcaption>    
+        </div>
+        </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          
+          <h2 class="featurette-heading fw-normal lh-1">Read 3D Object</h2>
+          
+          <p class="lead">The reading function allows you to read a 3D file in *.obj format, dynamically create objects in C++, and store the objects in the file using the obj syntax.</p>
+          <p class="lead">Each line of the file is processed, and an action is performed based on its associated keyword.</p>
+          <p class="lead">The main syntax for a 3D object is as follows: it includes the vertices, the object name, and the object's faces, along with the vertex numbers that form each face.</p>
+
+          <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          -->
+        </div>
+
+        <div class="col-md-5 order-md-1">
+              <figure class="text-center">
+                        <br><br>
+                      <img class="featurette-image img-fluid mx-auto rounded" src="img/comp.png" width="800" height="500">
+                      <figcaption class="fst-italic mt-3 lead">Basic *.obj file</figcaption>
+            </figure>
+              
+      </div>
+      
+    </div>
+      
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Dynamic creation and convexity</h2>
+        <p class="lead">Once the objects are created, the convexity of each polyhedron is tested and marked. After reading, the list of polyhedra, faces, and vertices is retrieved and stored in the algorithm class.</p>
+        <p class="lead">We now apply one of the algorithms we developed to perform the polyhedron permutations. The permutation that yields a valid solution with the fewest output polyhedra is chosen. The goal is to always lower the final number of polyhedra after the merge.</p>
+        <p class="lead"></p>
+        <p class="lead"></p>
+
+      </div>
+      <div class="col-md-5">
+        <figure class="text-center">
+          <img class="featurette-image img-fluid mx-auto rounded" src="img/fusion_convex.png" width="250" height="250" alt="good permutation">
+          <figcaption class="fst-italic mt-3 lead">Valid solution</figcaption>
+      </figure>
+      </div>
+
+    </div>
+
+    
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        
+        <h2 class="featurette-heading fw-normal lh-1">Write 3D Object</h2>
+        
+        <p class="lead">Finally, the solution(s) are written in *.obj format, passing the filename, the list of vertices, and the list of polyhedra as parameters. First, all the vertices of the solution are written, then all the polyhedra. The solution(s) can then be visualized, for example, in Blender.</p>
+        <br>
+        <figure class="text-center">
+                    <img class="featurette-image img-fluid mx-auto rounded" src="img/solution.png" alt="solve" width="400" height="400">
+                    <figcaption class="fst-italic mt-3 lead">Solutions</figcaption>
+                </figure>
+      </div>
+
+      <div class="col-md-5 order-md-1">
+        <br><br>
+        <div class="row">
+                <figure class="text-center">
+                    <img class="featurette-image img-fluid mx-auto rounded" src="img/original.png" alt="og" width="320" height="320">
+                    <figcaption class="fst-italic mt-3 lead">Original</figcaption>
+                </figure>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+  </div>
+<br>
+
+    <script src="../../src/js/home_page.js"></script>
+</body>
+</html>
